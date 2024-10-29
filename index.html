@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            min-height: 100vh;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    
+    <script src="p5.min.js"></script>
+    <script>
+
+        let x = 0
+        let y = 0
+        let d = 0
+
+        function setup(){
+            createCanvas(500,500)
+            angleMode(DEGREES)
+        }
+
+
+        //line(x_start, y_start, x_end, y_end)
+        function draw(){
+            background("red")
+            fill("wheat")
+
+            x = 250
+            y = 250
+            d = 400
+            //line(0, 0, x, y)
+            circle(x,y,d)
+
+            //circle(x, y, diameter)
+            fill("white")
+            x = 180
+            y = 180
+            d = 90
+            circle(x, y, d)
+            x = 320
+            y = 180
+            d = 90
+            circle(x, y, d)
+            fill("black")
+            x = 180
+            y = 160 
+            d = 40
+            circle(x, y, d)
+            x = 320
+            y = 200
+            circle(x, y, d)
+            // 255 e 350 sono le coordinate del centro
+            // 200 e 200 sono la larghezza e l'altezza dell'ellisse 
+            // 0 è l'angolo di partenza
+            // 180 è l'angolo di arrivo (viene disegnato in senso orario)
+            noFill()
+            arc(250, 300, 250, 150, 0, 180)
+            strokeWeight(5)
+        }
+    </script>
+</body>
+</html>
